@@ -1,0 +1,43 @@
+{
+    "name": "yuloh/pipe",
+    "type": "library",
+    "description": "A pipeline implementation",
+    "keywords": [
+        "yuloh",
+        "pipe"
+    ],
+    "homepage": "https://github.com/yuloh/pipe",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matt Allan",
+            "email": "matthew.james.allan@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : "~5.6|~7.0",
+        "container-interop/container-interop": "^1.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "4.*",
+        "squizlabs/php_codesniffer": "~2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yuloh\\Pipe\\": "src"
+        },
+        "files": [
+            "src/functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Yuloh\\Pipe\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "cs": "phpcs --standard=psr2 src/"
+    }
+}
